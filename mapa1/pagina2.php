@@ -56,15 +56,12 @@
 		<section class="index_marmitas" style ="margin-top: 3%;">
 			<?php
 				if(isset($_GET['id']) && !empty($_GET['id'])){
-					//echo "ID = ". $_GET['id'];
-					$id = $_GET['id'];//validar o recebimento do id
+					$id = $_GET['id'];
 					foreach($marmitas as $key => $value){
 						if($value['id'] == $id){
-							//alterei aqui
 					?>
 						<header class="main_tutorial_header">
 							<h1><?=$value['titulo'];?></h1>
-							<!--alterei aqui-->
 							<h2>Preço: <?=$value['preco'];?></h2>
 							<h3>Peça no Whats: <?=$value['contato'];?></h3>
 						</header>

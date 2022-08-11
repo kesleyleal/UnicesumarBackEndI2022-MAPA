@@ -35,22 +35,20 @@
 		
 		<section class="main_marmitas">
 			<header class="main_marmitas_header">
-				<!-- //alterei aqui -->
 				<h1><a name="marmitas">Nossas Marmitas</h1></a>
 				<p>Desfrute do nosso cardapio de marmitas, sinta-se em casa!</p>
 			</header>
 			<?php
-			//validar se array existe e se não está vazio
 			if(is_array($marmitas) && !empty($marmitas)){
 				foreach($marmitas as $key => $value){
 			?>
 			<article>
-				<!-- passar o titulo da noticia para ser impresso no title da página -->
 				<a href="pagina2.php?id=<?=$value['id'];?>">
-				<!-- //alterei aqui -->
-				<img src=<?=$value['imagem'];?> title="<?=$value['title_img'];?>" alt="<?=$value['title_img'];?>"></a>
+				<img style ="width: 50%; height: 30%;" src=<?=$value['imagem'];?> title="<?=$value['title_img'];?>" alt="<?=$value['title_img'];?>"></a>
 				<h2><?=$value['titulo'];?></h2>
-				<p><?=substr($value['descricao'], 0, 150);?>...</p>
+				<p><?=substr($value['descricao'], 0, 150);?>.</p>
+				<b><p><?=substr($value['preco'], 0, 150);?>.</p></b>
+				<p><a class ="test" href="pagina2.php?id=<?=$value['id'];?>"class="btn">Saiba Mais</a></p>
 			</article>
 			<?php
 			}                               
@@ -64,7 +62,7 @@
 
 	<footer>
 
-	<h1 class= "footer_index">Mais Informações.</h1>
+	<h1 class= "footer_index">Mais Informações</h1>
 
     <div class = "footer_itens">
          <div class = "div_itens">
@@ -77,11 +75,13 @@
          </div>
     
          <div class = "div_itens">
+			<br><br>
          <h1 class ="texto">Sobre o Projeto</h1>
          <a>Projeto realizado para o MAPA BackEndI</a>
          </div>
 
          <div>
+			<br><br><br><br><br><br>
             <b class= "texto"> Desenvolvido por Kesley I S Leal </b>
          </div>
 
